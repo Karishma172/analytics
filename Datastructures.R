@@ -256,10 +256,27 @@ marks;marks2;course
 #create Dataframe
 
 
-df1=data.frame(rollno,sname,gender,marks,marks2,course,stringsAsFactors = F)
+df1=data.frame(rollno,sname,gender,marks,marks2,course,stringsAsFactors = F)# to avoid strings from becoming a category we use strings as factors
 str(df1) #structure of dataframe
 head(df1) # top 6 rows
 head(df1,n=3) #top 3 rows
+
+
+tail(df1) #last 6 rows
+
+class(df1) # DF
+
+summary(df1) #summary
+
+df1$gender = factor(df1$gender) # taking gender as a factor ,categorising it
+
+
+df1$course = factor(df1$course)
+
+str(df1)
+
+summary(df1)
+
 
 #set.seed(1234)
 #(g=sample(c('')))
